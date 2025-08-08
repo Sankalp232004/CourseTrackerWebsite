@@ -1,6 +1,3 @@
-// data.js
-
-// To add a new course, copy an entire object (from { to }) and paste it as a new item in the list.
 const completedCourses = [
     {
         title: "Data Analysis with Python",
@@ -34,8 +31,6 @@ const completedCourses = [
     }
 ];
 
-
-// To add a new goal, add a new object to this list.
 const futureGoals = [
     {
         topic: "Advanced Econometrics",
