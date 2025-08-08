@@ -1,14 +1,38 @@
 const completedCourses = [
     {
-        title: "Introduction to Statistics (MA121)",
-        platform: "Saylor Academy",
-        skills: "Statistics, Hypothesis Testing, Statistical Modeling",
+        title: "Data Analysis with Python",
+        platform: "freeCodeCamp",
+        skills: "Python, NumPy, Pandas, Matplotlib, Data Wrangling",
         status: "✅ Completed"
     },
     {
-        title: "Data Analysis with Python",
+        title: "Principles of Microeconomics (ECON101)",
+        platform: "Saylor Academy",
+        skills: "Microeconomics, Market Analysis, Economic Modeling",
+        status: "✅ Completed"
+    },
+    {
+        title: "Time Series Forecasting",
         platform: "freeCodeCamp",
-        skills: "Data Analysis, Python, Pandas, NumPy",
+        skills: "Forecasting Models, ARIMA, Seasonality, Trend Analysis",
+        status: "✅ Completed"
+    },
+    {
+        title: "Excel for Everyone: Core",
+        platform: "Coursera (UBC)",
+        skills: "PivotTables, Data Cleaning, Formulas, Charting",
+        status: "✅ Completed"
+    },
+    {
+        title: "Git & GitHub",
+        platform: "freeCodeCamp",
+        skills: "Version Control, Branching, Merging, Collaboration",
+        status: "✅ Completed"
+    },
+    {
+        title: "Introduction to Statistics (MA121)",
+        platform: "Saylor Academy",
+        skills: "Statistics, Hypothesis Testing, Statistical Modeling",
         status: "✅ Completed"
     },
     {
@@ -21,12 +45,6 @@ const completedCourses = [
         title: "Python (Basic) Certificate",
         platform: "HackerRank",
         skills: "Python, Problem Solving, Algorithms",
-        status: "✅ Completed"
-    },
-    {
-        title: "Principles of Microeconomics (ECON101)",
-        platform: "Saylor Academy",
-        skills: "Microeconomics, Market Analysis, Economic Modeling",
         status: "✅ Completed"
     },
     {
