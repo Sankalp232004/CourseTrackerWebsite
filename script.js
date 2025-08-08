@@ -1,12 +1,9 @@
-// script.js
-
 document.addEventListener('DOMContentLoaded', function() {
     const coursesGrid = document.getElementById('courses-grid');
     const goalsList = document.getElementById('goals-list');
     const filterInput = document.getElementById('filter-input');
     const typewriterElement = document.getElementById('typewriter');
 
-    // --- 1. Typewriter Effect Logic ---
     const textToType = typewriterElement.innerText;
     typewriterElement.innerText = '';
     let i = 0;
@@ -15,16 +12,13 @@ document.addEventListener('DOMContentLoaded', function() {
         if (i < textToType.length) {
             typewriterElement.innerHTML += textToType.charAt(i);
             i++;
-            setTimeout(typeWriter, 50); // Adjust typing speed here (milliseconds)
+            setTimeout(typeWriter, 50);
         } else {
-            // After typing, remove the cursor by changing the pseudo-element style
-             typewriterElement.style.borderRight = 'none';
+            typewriterElement.style.borderRight = 'none';
         }
     }
     typeWriter();
 
-    // --- 2. Dynamic Content Population ---
-    // Populate Completed Courses
     completedCourses.forEach(course => {
         const card = document.createElement('div');
         card.className = 'card';
@@ -37,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
         coursesGrid.appendChild(card);
     });
 
-    // Populate Future Goals
     futureGoals.forEach(goal => {
         const item = document.createElement('div');
         item.className = 'list-item';
@@ -49,8 +42,6 @@ document.addEventListener('DOMContentLoaded', function() {
         goalsList.appendChild(item);
     });
 
-
-    // --- 3. Live Filtering Logic ---
     filterInput.addEventListener('keyup', () => {
         const searchTerm = filterInput.value.toLowerCase();
         const allCourses = coursesGrid.querySelectorAll('.card');
@@ -65,21 +56,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // --- 4. Animation on Scroll Logic ---
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                observer.unobserve(entry.target); // Optional: Stop observing after it's visible
+                observer.unobserve(entry.target);
             }
         });
     }, {
-        threshold: 0.1 // Trigger when 10% of the element is visible
+        threshold: 0.1
     });
 
-    // Observe all cards and list items
     document.querySelectorAll('.card, .list-item').forEach(el => {
         observer.observe(el);
     });
-
 });
